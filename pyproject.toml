@@ -1,0 +1,9 @@
+[tool.poetry]
+name = "hs-assets-databricks-resources"
+version = "0.0.1"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+databricks-connect = "~15.4"
+databricks-sdk = "^0.52.0"
+poetry-dotenv-plugin = "^0.2.0"
