@@ -21,7 +21,7 @@ client_id = os.environ.get("CLIENT_ID")
 client_secret = os.environ.get("CLIENT_SECRET")
 
 # resource for sql server
-resource = "https://database.windows.net/.default"
+resource = "https://database.windows.net/.default offline_access"
 
 # request data
 data = {
@@ -69,10 +69,12 @@ request_body = {
     "pkce_verifier": "uSEEBJIX9TpIZmlWzPkrvin-HoXA_TWghZY04H_YKfzJG3kn3_MyXg",
 }
 
+adb_ws_url = os.environ.get("DATABRICKS_WORKSPACE_URL")
+
 try:
     # make request to create connection
     response = requests.post(
-        "https://adb-1932855278966667.7.azuredatabricks.net/api/2.1/connections",
+        f"{adb_ws_url}/api/2.1/connections",
         headers=headers,
         json=request_body
     )
