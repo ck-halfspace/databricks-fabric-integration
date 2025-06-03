@@ -2,7 +2,7 @@
 - create workspace
 - create lakehouse to reference inside Databricks UC (as foreign catalog)
 - assign Entra ID security group an admin/member on workspace (SPN to be a member of this group)
-- Fabric admin settings to be enabled: "Service principals can access read-only admin APIs" = enabled for security group 
+- Fabric tenant setting to be enabled: "Service principals can use Fabric APIs" = enabled for security group 
 
 ## Setup on Azure
 - create App Registration
